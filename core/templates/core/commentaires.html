@@ -1,0 +1,51 @@
+{% extends '../base.html'%}
+{% load static %}{% load skill_tags %}
+
+{% block title %}Commentaires - Portfolio Développeur Full-Stack{% endblock %}
+
+{% block content%}
+    <!-- Section Commentaires -->
+<div class="mt-16 animate-slide-up">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 glass-dark rounded-2xl p-8">
+    
+    <!-- Formulaire -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6 text-white">💬 Laissez un commentaire</h2>
+      <form method="POST" class="space-y-4">
+        {% csrf_token %}
+        <div>
+          <label for="id_nom" class="block text-sm font-medium text-gray-300 mb-1">Nom</label>
+          {{ form.nom }}
+        </div>
+        <div>
+          <label for="id_message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+          {{ form.message }}
+        </div>
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold">
+          Envoyer
+        </button>
+      </form>
+    </div>
+
+    <!-- Commentaires -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-6 text-white">📝 Commentaires récents</h3>
+      <div class="space-y-6 max-h-[500px] overflow-y-auto pr-2">
+        {% for commentaire in commentaires %}
+          <div class="bg-gray-900 border border-gray-700 rounded-xl p-4 shadow">
+            <div class="flex justify-between items-center mb-1">
+              <p class="font-bold text-green-400">{{ commentaire.nom }}</p>
+              <p class="text-sm text-gray-500">{{ commentaire.date|date:"d/m/Y H:i" }}</p>
+            </div>
+            <p class="text-gray-300 leading-relaxed">{{ commentaire.message }}</p>
+          </div>
+        {% empty %}
+          <p class="text-gray-500">Aucun commentaire pour le moment.</p>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock%}

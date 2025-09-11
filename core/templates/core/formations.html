@@ -1,0 +1,144 @@
+{% extends '../base.html' %}
+{% load static %}{% load skill_tags %}
+
+{% block title %}Formations - Portfolio Développeur Full-Stack{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 text-sm font-medium text-blue-400 mb-6">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
+                Formations
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Formations continues et spécialisations professionnelles
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Mon parcours académique et les formations qui ont façonné mes compétences en 
+                développement web et technologies modernes.
+            </p>
+        </div>
+        
+        <!-- Categories -->
+        <div class="grid md:grid-cols-4 gap-4 mb-16">
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white">Diplômes délivrés</h3>
+            </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white">Certifications</h3>
+            </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white">Établissements</h3>
+            </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white">Spécialisations</h3>
+            </div>
+        </div>
+        
+        <!-- Education Timeline -->
+        <div class="space-y-8">
+            <!-- Formation 1 -->
+           {% for formation in formations %}
+        <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
+            <div class="flex items-start justify-between mb-4">
+                <div class="flex items-center">
+                    <!-- Icône dynamique selon le type -->
+                    <div class="w-12 h-12 bg-gradient-to-r from-slate-900 to-slate-700 rounded-lg flex items-center justify-center mr-4">
+                    {% if formation.type == "Diplôme" %}
+                    <!-- 🎓 Chapeau universitaire noir -->
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                        <path d="M12 13L1 7v2l11 6 11-6V7l-11 6z" opacity="0.3"/>
+                     </svg>
+                    {% elif formation.type == "Certificat" %}
+                    <!-- 📜 Document officiel -->
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 
+                            3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 
+                            3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 
+                            3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 
+                            3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 
+                            3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+
+                    {% else %}
+                        <!-- Icône autre -->
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+
+                        </svg>
+                    {% endif %}
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">{{ formation.diploma|upper }}</h3>
+                    <p class="text-blue-400 font-semibold">{{ formation.institution|title }}</p>
+                    <p class="text-gray-400">{{ formation.location }}</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-{{ formation.period.color }}-500/20 text-{{ formation.period.color }}-300">
+                    {{ formation.period.status }}
+                </span>
+                <p class="text-gray-400 mt-1">{{ formation.period.text }}</p>
+            </div>
+        </div>
+        <p class="text-gray-400 mb-4">{{ formation.description }}</p>
+        <div class="flex flex-wrap gap-2">
+            {% for tag in formation.get_tags %}
+                <span class="px-3 py-1 rounded-full text-sm {{tag|skill_color}}">{{ tag }}</span>
+                
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+            
+        
+        <!-- CTA Section -->
+        <div class="text-center mt-16">
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700/50 max-w-4xl mx-auto">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                    </svg>
+                </div>
+                
+                <h2 class="text-3xl font-bold mb-4">
+                    Je continue à me former régulièrement aux dernières technologies pour rester à la pointe de
+                    l'innovation.
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">
+                    Apprentissage continu • Veille technologique
+                </p>
+                
+                <a href="{% url 'core:contact' %}" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300">
+                    Approcher du côté
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

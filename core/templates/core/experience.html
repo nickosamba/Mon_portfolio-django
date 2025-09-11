@@ -1,0 +1,60 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Expérience - Portfolio Développeur Full-Stack{% endblock %}
+
+{% block content %}
+<section class="min-h-screen py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <span class="gradient-text-animated">Expérience</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Mon parcours professionnel et mes réalisations
+            </p>
+        </div>
+
+        <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500"></div>
+
+            <!-- Experience items -->
+            <div class="space-y-12">
+                <!-- Experience 1 -->
+                {% for experience in experiences %}
+                <div class="relative flex items-center">
+                    {% if forloop.counter|divisibleby:"2" %}
+                    <!-- Expérience côté gauche -->
+                    <div class="w-1/2"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-slate-900"></div>
+                    <div class="w-1/2 pl-8">
+                        <div class="glass-dark rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-2">{{experience.title}}</h3>
+                        {% if experience.company or experience.period %}
+                        <p class="text-purple-400 mb-3">{{experience.company}} • {{experience.period}}</p>
+                        {%endif%}
+                        <p class="text-gray-400">{{experience.description}}</p>
+                        </div>
+                    </div>
+                    {% else %}
+                    <!-- Expérience côté droit -->
+                    <div class="w-1/2 pr-8 text-right">
+                        <div class="glass-dark rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-2">{{experience.title}}</h3>
+                        {% if experience.company or experience.period %}
+                        <p class="text-blue-400 mb-3">{{experience.company}} • {{experience.period}}</p>
+                        {%endif%}
+                        <p class="text-gray-400">{{experience.description}}</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-900"></div>
+                    <div class="w-1/2"></div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

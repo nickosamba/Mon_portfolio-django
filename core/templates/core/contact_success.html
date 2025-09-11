@@ -1,0 +1,11 @@
+{% extends '../base.html' %}
+{% block title %}Message envoyé{% endblock %}
+{% block content %}
+<section class="min-h-screen flex items-center justify-center text-center text-white">
+  <div>
+    <h1 class="text-4xl font-bold mb-4">✅ Message envoyé avec succès !</h1>
+    <p class="text-lg text-gray-300 mb-6">Merci pour votre message, je vous répondrai très bientôt.</p>
+    <a href="{% url 'core:home' %}" class="btn">Retour à l'accueil</a>
+  </div>
+</section>
+{% endblock %}

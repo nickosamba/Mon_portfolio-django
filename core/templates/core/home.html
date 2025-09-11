@@ -1,0 +1,545 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}Accueil - Portfolio Développeur Full-Stack{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-8 pb-20">
+    
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="animate-fade-in delay-200">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text-animated">Bienvenue sur NickoTech | Ingénierie, Innovation & Intelligence Numérique</span><br>
+                    <span class="text-white"> </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                    Créateur d'expériences numériques innovantes et performantes
+                </p>
+                <h2 class="gradient-text-animated "> Vous avez un projet ou un besoin digital ? Parlons-en. </h2>
+                <p>👉 Contactez-nous pour transformer vos idées en solutions concrètes.</p><br>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{% url 'core:projets' %}" class="btn-enhanced px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300">
+                        Voir mes projets
+                    </a>
+                    <a href="{% url 'core:contact' %}" class="px-8 py-4 border-2 border-blue-500 rounded-full font-semibold text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Stack -->
+<section class="py-20 bg-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                <span class="gradient-text-animated">Technologies</span> Maîtrisées
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Stack technique moderne pour des solutions performantes
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Django -->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.637 0 1.121.051 1.707.178zm0 9.143c-.535-.127-.892-.178-1.427-.178-2.140 0-3.415 1.24-3.415 3.415 0 2.24 1.199 3.49 3.441 3.49.51 0 .892-.025 1.401-.127zM20.554 0h3.911v15.64c0 2.701-.433 4.154-1.708 5.302-1.198 1.097-2.701 1.554-5.302 1.554-.51 0-1.121-.025-1.529-.076v-2.804c.433.051.789.076 1.198.076 1.935 0 2.803-.866 2.803-3.415V0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Django</h3>
+                <p class="text-gray-400 text-sm">Framework Python pour backends robustes</p>
+            </div>
+
+            <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M2.5 3.5l5.5 3.5 5.5-3.5 5.5 3.5v7l-5.5 3.5-5.5-3.5-5.5 3.5v-7l5.5-3.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Laravel</h3>
+                <p class="text-gray-400 text-sm">Framework PHP moderne pour des applications web robustes</p>
+            </div>
+
+
+            <!-- Flutter -->
+            <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3.5 3.5L12 12l-8.5 8.5L0 16l8.5-8.5L0 0zM12 12l8.5 8.5L24 16l-8.5-8.5L24 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Flutter</h3>
+                <p class="text-gray-400 text-sm">Applications mobiles multiplateformes</p>
+            </div>
+            <!-- Dart -->
+            <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm0 1.5l9.105 5.25v10.5L12 22.5l-9.105-5.25V6.75L12 1.5zm-2.25 6.75v1.5H12v1.5h-2.25v1.5H12v1.5h-2.25v1.5H12v1.5h-2.25v1.5H12v1.5h-3.75v-9H12z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Dart</h3>
+                <p class="text-gray-400 text-sm">Langage optimisé pour Flutter et les interfaces réactives</p>
+            </div>
+
+
+            <!-- Python -->
+            <div class="animate-slide-up delay-400 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.21-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm2.09-6.4l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Python</h3>
+                <p class="text-gray-400 text-sm">Développement backend puissant</p>
+            </div>
+
+            
+
+            <!-- Php -->
+            <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.385.6.111.82-.26.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.527.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.295-1.23 3.295-1.23.655 1.649.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.805 5.624-5.475 5.921.43.37.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">PHP</h3>
+                <p class="text-gray-400 text-sm">Développement côté serveur et logique métier</p>
+            </div>
+            <!-- JavaScript -->
+            <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4V4zm8.5 13.5c0 .83-.67 1.5-1.5 1.5h-1v-1h1c.28 0 .5-.22.5-.5v-4h1v4zm3.5 1.5h-1v-1h1c.28 0 .5-.22.5-.5v-2c0-.28-.22-.5-.5-.5h-1v-1h1c.83 0 1.5.67 1.5 1.5v2c0 .83-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                <p class="text-gray-400 text-sm">Logique interactive et dynamisme côté client</p>
+            </div>
+            <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M1.5 0h21l-1.91 21.6L12 24l-8.59-2.4L1.5 0zm16.2 6H6.3l.3 3h10.5l-.3 3H6.9l.3 3h7.5l-.3 3-2.4.6-2.4-.6-.15-1.8H6.3l.3 3.6L12 21l5.4-1.5.6-6.6.3-3.9.3-3z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">HTML</h3>
+                <p class="text-gray-400 text-sm">Structure sémantique des pages web</p>
+            </div>
+            <!-- CSS -->
+             <div class="animate-slide-up delay-200 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300 ">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M1.5 0h21l-1.91 21.6L12 24l-8.59-2.4L1.5 0zm16.2 6H6.3l.3 3h10.5l-.3 3H6.9l.3 3h7.5l-.3 3-2.4.6-2.4-.6-.15-1.8H6.3l.3 3.6L12 21l5.4-1.5.6-6.6.3-3.9.3-3z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">CSS</h3>
+                <p class="text-gray-400 text-sm">Design, animations et mise en forme visuelle</p>
+            </div>
+
+
+
+
+            
+
+            <!-- Cloud Architecture -->
+            <div class="animate-slide-up delay-500 glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Cloud</h3>
+                <p class="text-gray-400 text-sm">Architecture scalable et moderne</p>
+            </div>
+            <!--Réseaux-->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v2H4V4zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Réseaux</h3>
+                <p class="text-gray-400 text-sm">Infrastructure, protocoles et sécurité des communications</p>
+            </div>
+
+            <!-- Systèmes -->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-gray-600 to-gray-800 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Systèmes</h3>
+                <p class="text-gray-400 text-sm">Administration Linux, Unix et Windows Server</p>
+            </div>
+
+            <!-- Git -->
+             <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0L24 12l-12 12L0 12 12 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Git</h3>
+                <p class="text-gray-400 text-sm">Versioning, collaboration et gestion de code source</p>
+            </div>
+            <!-- Render-->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 01.88-7.903A5 5 0 0115.9 6a5 5 0 011 9.9"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Render</h3>
+                <p class="text-gray-400 text-sm">Déploiement cloud moderne et automatisé</p>
+            </div>
+            <!-- Docker-->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 12h18v2H3v-2zm0 4h18v2H3v-2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Docker</h3>
+                <p class="text-gray-400 text-sm">Conteneurisation et déploiement portable</p>
+            </div>
+            <!-- Base de donne -->
+
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 4h16v4H4V4zm0 6h16v4H4v-4zm0 6h16v4H4v-4z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Bases de données</h3>
+                <p class="text-gray-400 text-sm">SQL, NoSQL, optimisation et gestion des données</p>
+            </div>
+
+            <!-- cisco -->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5v14"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Cisco</h3>
+                <p class="text-gray-400 text-sm">Réseaux professionnels, routage et commutation</p>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <text x="4" y="16" font-size="12" fill="white">B</text>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Bootstrap</h3>
+                <p class="text-gray-400 text-sm">Framework CSS rapide et responsive</p>
+            </div>
+            <!-- talwinds css-->
+            <div class="animate-slide-up glass-dark rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 4c-4 0-6 2-6 4 0 2 2 4 4 4s2-2 4-2 2 2 4 2 4-2 4-4-2-4-6-4z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Tailwind CSS</h3>
+                <p class="text-gray-400 text-sm">Design utilitaire moderne et flexible</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Evolution Schema Section -->
+<section class="py-20 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                <span class="gradient-text-animated">Mon évolution</span>
+                <br>dans le monde du développement web
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Un parcours de croissance continue et d'apprentissage passionné
+            </p>
+        </div>
+
+        <!-- Evolution Timeline Schema -->
+        <div class="relative">
+            <!-- Central Timeline Line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-500 via-blue-500 to-purple-500"></div>
+
+            <!-- Evolution Steps -->
+            <div class="space-y-24">
+                <!-- Phase 1: Découverte -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 z-10 animate-pulse"></div>
+                    
+                    <!-- Content Left -->
+                    <div class="w-1/2 pr-12">
+                        <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-green-400">Phase 1</h3>
+                                    <p class="text-lg text-white font-semibold">Découverte</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Premiers pas dans le développement web avec HTML, CSS et JavaScript. 
+                                Fascination pour la création d'interfaces utilisateur interactives.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">HTML/CSS</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empty Right Side -->
+                    <div class="w-1/2"></div>
+                </div>
+
+                <!-- Phase 2: Approfondissement -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
+                    
+                    <!-- Empty Left Side -->
+                    <div class="w-1/2"></div>
+                    
+                    <!-- Content Right -->
+                    <div class="w-1/2 pl-12">
+                        <div class="animate-slide-right glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-blue-400">Phase 2</h3>
+                                    <p class="text-lg text-white font-semibold">Structuration</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Apprentissage des frameworks front-end comme Bootstrap et Tailwind CSS pour structurer des interfaces modernes.
+                                Premiers projets personnels et mise en ligne via GitHub Pages.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-500 rounded-full text-sm">Bootstrap</span>
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-500 rounded-full text-sm">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Expertise -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-400"></div>
+                    
+                    <!-- Content Left -->
+                    <div class="w-1/2 pr-12">
+                        <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-purple-400">Phase 3</h3>
+                                    <p class="text-lg text-white font-semibold">Maîtrise du backend</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Découverte de la logique serveur avec PHP et Laravel, puis approfondissement avec Python et Django. 
+                                Mise en place de bases de données SQL et NoSQL, gestion des modèles et des APIs REST.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Php</span>
+                                <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">Laravel</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Django</span>
+                                <span class="px-3 py-1 bg-red-300/20 text-red-200 rounded-full text-sm">Apis Rest</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empty Right Side -->
+                    <div class="w-1/2"></div>
+                
+                </div>
+
+                <!-- Phase 2: Approfondissement -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
+                    
+                    <!-- Empty Left Side -->
+                    <div class="w-1/2"></div>
+                    
+                    <!-- Content Right -->
+                    <div class="w-1/2 pl-12">
+                        <div class="animate-slide-right glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-blue-400">Phase 4</h3>
+                                    <p class="text-lg text-white font-semibold">Systèmes & Réseaux</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                               Formation en administration système (Linux, Windows Server), réseaux informatiques 
+                               et cybersécurité. Certification Cisco, configuration de serveurs, routage et virtualisation.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-500 rounded-full text-sm">Reseaux</span>
+                                <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm">Systeme</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        
+
+        <!-- Phase 3: Expertise -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-400"></div>
+                    
+                    <!-- Content Left -->
+                    <div class="w-1/2 pr-12">
+                        <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-purple-400">Phase 5</h3>
+                                    <p class="text-lg text-white font-semibold">Conteneurisation & Cloud</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Intégration de Docker pour la portabilité des projets. Déploiement sur des plateformes comme Render et Heroku. 
+                                Architecture cloud scalable et automatisée.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Render</span>
+                                <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">Heroku</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empty Right Side -->
+                    <div class="w-1/2"></div>
+                
+                </div>
+
+                <!-- Phase 2: Approfondissement -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
+                    
+                    <!-- Empty Left Side -->
+                    <div class="w-1/2"></div>
+                    
+                    <!-- Content Right -->
+                    <div class="w-1/2 pl-12">
+                        <div class="animate-slide-right glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-blue-400">Phase 6</h3>
+                                    <p class="text-lg text-white font-semibold">Intelligence & Données</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Exploration de l’intelligence artificielle, du machine learning et du traitement de données. 
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Intelligence Artificielle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 1: Découverte -->
+                <div class="relative flex items-center">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 z-10 animate-pulse"></div>
+                    
+                    <!-- Content Left -->
+                    <div class="w-1/2 pr-12">
+                        <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-green-400">Phase 7</h3>
+                                    <p class="text-lg text-white font-semibold">Transmission & Mentorat</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Accompagnement de jeunes développeurs et professionnels. 
+                                Création de contenus pédagogiques, ateliers et mentorat personnalisé.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empty Right Side -->
+                    <div class="w-1/2"></div>
+                </div>
+            
+                <!-- Evolution Arrow -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-bounce-gentle">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </div>
+            </div>
+    </div>
+    </div>
+</section>
+{% endblock %}
