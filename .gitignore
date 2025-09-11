@@ -1,0 +1,39 @@
+# 🔒 Fichiers sensibles
+.env
+*.key
+*.pem
+local_settings.py
+
+# 🐍 Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# 🧪 Environnement virtuel
+env/
+venv/
+ENV/
+.venv/
+.machinevirtuelle
+
+# 🗃️ Base de données locale
+db.sqlite3
+
+# 📦 Fichiers générés
+staticfiles/
+*.log
+
+# 🖼️ Uploads utilisateur
+media/
+
+# ⚙️ Config éditeurs
+.vscode/
+.idea/
+
+# 🖥️ Fichiers système
+.DS_Store
+Thumbs.db
+
+.env.local
+.env.prod
