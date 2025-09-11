@@ -22,12 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#r4jzb#&_r^t-xmrz03ci5o)@xhd-y7dw3cruydyl1gvzk0$b5'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+
+
 
 
 # Application definition
@@ -81,9 +83,17 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # ← PostgreSQL au lieu de sqlite3
+        'NAME': config('DB_NAME'),                 # ← Nom de la base
+        'USER': config('DB_USER'),                 # ← Utilisateur
+        'PASSWORD': config('DB_PASSWORD'),         # ← Mot de passe
+        'HOST': config('DB_HOST'),                 # ← Adresse du serveur
+        'PORT': config('DB_PORT', default='5432'), # ← Port (5432 par défaut)
     }
 }
 
@@ -110,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'UTC'
 
@@ -123,8 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
+#MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -144,6 +153,23 @@ AUTH_USER_MODEL = 'core.CustomUser'
 #la cle tinify
 TINIFY_API_KEY = config("TINIFY_API_KEY")
 
+#ajout
+CLOUD_NAME = config('CLOUD_NAME')
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': CLOUD_NAME,
+    'API_KEY': config('API_KEY'),
+    'API_SECRET': config('API_SECRET'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = f"https://res.cloudinary.com/{CLOUD_NAME}/"
+
+#super user deploiement
+DJANGO_SUPERUSER_USERNAME = config('DJANGO_SUPERUSER_USERNAME')
+DJANGO_SUPERUSER_EMAIL = config('DJANGO_SUPERUSER_EMAIL')
+DJANGO_SUPERUSER_PASSWORD = config('DJANGO_SUPERUSER_PASSWORD')
+
 #Messagerie
 # Configuration pour l'envoi d'e-mails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  
@@ -153,3 +179,10 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
