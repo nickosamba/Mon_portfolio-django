@@ -37,7 +37,7 @@ EMAIL_USE_TLS=True
 Développé par Nicko (SAMBA Aimé Darel) 📍 Brazzaville, République du Congo 💼 Passionné par le web, l’IA, le réseau et les systèmes 🎓 Parcours en génie informatique
 
 🔗 [Mon GitHub](https://github.com/nickosamba)
-🔗 [LICENSE](https://github.com/nickosamba/Mon_portfolio-django/blob/main/LICENSE)
+🔗 [LICENSE](https://github.com/nickosamba/Mon-portfolio-dajngo?tab=MIT-1-ov-file)
 
 📄 Licence
 Ce projet est sous licence MIT. Consulte le fichier [LICENSE](https://github.com/nickosamba/Mon_portfolio-django/blob/main/LICENSE) pour plus d’informations.
