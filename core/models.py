@@ -1,11 +1,14 @@
 from django.db import models
 
+import tinify
+import requests
+from django.core.files.base import ContentFile
+
 # Create your models here.
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
 from django.utils.dateformat import DateFormat
-import tinify
 from django.conf import settings
 import os
 
@@ -26,20 +29,28 @@ class CustomUser(AbstractUser):
     
     
     #compresser
+    def compress_image_from_url(self, image_field):
+        if image_field and hasattr(image_field, 'url') and image_field.url.lower().endswith((".jpg", ".jpeg", ".png")):
+            try:
+                response = requests.get(image_field.url)
+                source = tinify.from_buffer(response.content)
+                compressed = source.to_buffer()
+
+                # Remplace l'image par la version compressée
+                image_field.save(image_field.name, ContentFile(compressed), save=False)
+                print(f"Image compressée : {image_field.url}")
+            except tinify.Error as e:
+                print(f"Erreur Tinify : {e}")
+            except Exception as e:
+                print(f"Erreur générale : {e}")
+
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs)  # Sauvegarde initiale
 
-        def compress_image(image_field):
-            if image_field and image_field.path.lower().endswith((".jpg", ".jpeg", ".png")):
-                try:
-                    source = tinify.from_file(image_field.path)
-                    source.to_file(image_field.path)
-                    print(f"Image compressée : {image_field.path}")
-                except tinify.Error as e:
-                    print(f" Erreur TinyPNG : {e}")
+        self.compress_image_from_url(self.photo)
+        self.compress_image_from_url(self.profile_public)
 
-        compress_image(self.photo)
-        compress_image(self.profile_public)
+        super().save(update_fields=['photo', 'profile_public'])  # Sauvegarde des images compressées
         
 # Modèle Projet
 class Project(models.Model):
@@ -54,20 +65,27 @@ class Project(models.Model):
     status = models.CharField(max_length=50, choices= STATUS, default="En cours")
     created_at = models.DateTimeField(auto_now_add=True)
     
-    #compresser
+    def compress_image_from_url(self, image_field):
+        if image_field and hasattr(image_field, 'url') and image_field.url.lower().endswith((".jpg", ".jpeg", ".png")):
+            try:
+                response = requests.get(image_field.url)
+                source = tinify.from_buffer(response.content)
+                compressed = source.to_buffer()
+
+                # Remplace l'image par la version compressée
+                image_field.save(image_field.name, ContentFile(compressed), save=False)
+                print(f"Image compressée : {image_field.url}")
+            except tinify.Error as e:
+                print(f"Erreur Tinify : {e}")
+            except Exception as e:
+                print(f"Erreur générale : {e}")
+
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs)  # Sauvegarde initiale
 
-        def compress_image(image_field):
-            if image_field and image_field.path.lower().endswith((".jpg", ".jpeg", ".png")):
-                try:
-                    source = tinify.from_file(image_field.path)
-                    source.to_file(image_field.path)
-                    print(f"Image compressée : {image_field.path}")
-                except tinify.Error as e:
-                    print(f" Erreur TinyPNG : {e}")
+        self.compress_image_from_url(self.image)
 
-        compress_image(self.image)
+        super().save(update_fields=['image'])  # Sauvegarde des images compressées
     
 
     def __str__(self):
