@@ -143,16 +143,21 @@ AUTH_USER_MODEL = 'core.CustomUser'
 TINIFY_API_KEY = config("TINIFY_API_KEY")
 
 #ajout
-CLOUD_NAME = config('CLOUD_NAME')
-
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': CLOUD_NAME,
-    'API_KEY': config('API_KEY'),
-    'API_SECRET': config('API_SECRET'),
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config('CLOUDINARY_API_KEY'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET'),
 }
+import cloudinary
 
+cloudinary.config( 
+  cloud_name = config('CLOUDINARY_CLOUD_NAME'), 
+  api_key = config('CLOUDINARY_API_KEY'), 
+  api_secret = config('CLOUDINARY_API_SECRET'),
+  secure = True
+)
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-MEDIA_URL = f"https://res.cloudinary.com/{CLOUD_NAME}/"
+MEDIA_URL = f"https://res.cloudinary.com/{config('CLOUDINARY_CLOUD_NAME')}/"
 
 #super user deploiement
 DJANGO_SUPERUSER_USERNAME = config('DJANGO_SUPERUSER_USERNAME')
