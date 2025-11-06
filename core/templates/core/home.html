@@ -270,6 +270,7 @@
 <!-- Evolution Schema Section -->
 <section class="py-20 bg-slate-900/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-20">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
                 <span class="gradient-text-animated">Mon évolution</span>
@@ -280,20 +281,20 @@
             </p>
         </div>
 
-        <!-- Evolution Timeline Schema -->
+        <!-- Evolution Timeline -->
         <div class="relative">
             <!-- Central Timeline Line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-500 via-blue-500 to-purple-500"></div>
+            <div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-500 via-blue-500 to-purple-500"></div>
 
             <!-- Evolution Steps -->
-            <div class="space-y-24">
+            <div class="space-y-16 md:space-y-24">
                 <!-- Phase 1: Découverte -->
-                <div class="relative flex items-center">
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
                     <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 z-10 animate-pulse"></div>
-                    
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 z-10 animate-pulse"></div>
+
                     <!-- Content Left -->
-                    <div class="w-1/2 pr-12">
+                    <div class="w-full md:w-1/2 md:pr-12 pl-16 md:pl-0">
                         <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
@@ -316,21 +317,18 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Empty Right Side -->
-                    <div class="w-1/2"></div>
                 </div>
 
-                <!-- Phase 2: Approfondissement -->
-                <div class="relative flex items-center">
+                <!-- Phase 2: Structuration -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
                     <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
-                    
-                    <!-- Empty Left Side -->
-                    <div class="w-1/2"></div>
-                    
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
+
+                    <!-- Empty Left Side on Desktop -->
+                    <div class="hidden md:block md:w-1/2"></div>
+
                     <!-- Content Right -->
-                    <div class="w-1/2 pl-12">
+                    <div class="w-full md:w-1/2 md:pl-12 pl-16">
                         <div class="animate-slide-right glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -355,13 +353,13 @@
                     </div>
                 </div>
 
-                <!-- Phase 3: Expertise -->
-                <div class="relative flex items-center">
+                <!-- Phase 3: Maîtrise Backend -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
                     <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-400"></div>
-                    
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-400"></div>
+
                     <!-- Content Left -->
-                    <div class="w-1/2 pr-12">
+                    <div class="w-full md:w-1/2 md:pr-12 pl-16 md:pl-0">
                         <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
@@ -387,22 +385,13 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Empty Right Side -->
-                    <div class="w-1/2"></div>
-                
                 </div>
 
-                <!-- Phase 2: Approfondissement -->
-                <div class="relative flex items-center">
-                    <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
-                    
-                    <!-- Empty Left Side -->
-                    <div class="w-1/2"></div>
-                    
-                    <!-- Content Right -->
-                    <div class="w-1/2 pl-12">
+                <!-- Phase 4: Systèmes & Réseaux -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-600"></div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="w-full md:w-1/2 md:pl-12 pl-16">
                         <div class="animate-slide-right glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -420,24 +409,17 @@
                                et cybersécurité. Certification Cisco, configuration de serveurs, routage et virtualisation.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-blue-600/20 text-blue-500 rounded-full text-sm">Reseaux</span>
-                                <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm">Systeme</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-500 rounded-full text-sm">Réseaux</span>
+                                <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm">Système</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            
-        
-
-        <!-- Phase 3: Expertise -->
-                <div class="relative flex items-center">
-                    <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-400"></div>
-                    
-                    <!-- Content Left -->
-                    <div class="w-1/2 pr-12">
+                <!-- Phase 5: Conteneurisation & Cloud -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-800"></div>
+                    <div class="w-full md:w-1/2 md:pr-12 pl-16 md:pl-0">
                         <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
@@ -460,36 +442,27 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Empty Right Side -->
-                    <div class="w-1/2"></div>
-                
                 </div>
 
-                <!-- Phase 2: Approfondissement -->
-                <div class="relative flex items-center">
-                    <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-200"></div>
-                    
-                    <!-- Empty Left Side -->
-                    <div class="w-1/2"></div>
-                    
-                    <!-- Content Right -->
-                    <div class="w-1/2 pl-12">
+                <!-- Phase 6: Intelligence & Données -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-1000"></div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="w-full md:w-1/2 md:pl-12 pl-16">
                         <div class="animate-slide-right glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-blue-400">Phase 6</h3>
+                                    <h3 class="text-2xl font-bold text-indigo-400">Phase 6</h3>
                                     <p class="text-lg text-white font-semibold">Intelligence & Données</p>
                                 </div>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Exploration de l’intelligence artificielle, du machine learning et du traitement de données. 
+                                Exploration de l’intelligence artificielle, du machine learning et du traitement de données.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Intelligence Artificielle</span>
@@ -498,18 +471,15 @@
                     </div>
                 </div>
 
-                <!-- Phase 1: Découverte -->
-                <div class="relative flex items-center">
-                    <!-- Timeline Dot -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 z-10 animate-pulse"></div>
-                    
-                    <!-- Content Left -->
-                    <div class="w-1/2 pr-12">
+                <!-- Phase 7: Transmission & Mentorat -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center">
+                    <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 z-10 animate-pulse delay-1200"></div>
+                    <div class="w-full md:w-1/2 md:pr-12 pl-16 md:pl-0">
                         <div class="animate-slide-left glass-dark rounded-2xl p-8 hover:scale-105 transition-all duration-300">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6M12 9v6"/>
                                     </svg>
                                 </div>
                                 <div>
@@ -518,28 +488,14 @@
                                 </div>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Accompagnement de jeunes développeurs et professionnels. 
-                                Création de contenus pédagogiques, ateliers et mentorat personnalisé.
+                                Partage de connaissances avec la communauté, mentorat et accompagnement de jeunes développeurs.
                             </p>
-                            <div class="flex flex-wrap gap-2">
-                               
-                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Empty Right Side -->
-                    <div class="w-1/2"></div>
-                </div>
-            
-                <!-- Evolution Arrow -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-8">
-                <div class="w-12 h-12 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-bounce-gentle">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
                 </div>
             </div>
-    </div>
+        </div>
     </div>
 </section>
+
 {% endblock %}
