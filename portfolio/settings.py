@@ -15,7 +15,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+#ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS=[]
 
 
 
@@ -72,18 +73,18 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # ← PostgreSQL au lieu de sqlite3
-        'NAME': config('DB_NAME'),                 # ← Nom de la base
-        'USER': config('DB_USER'),                 # ← Utilisateur
-        'PASSWORD': config('DB_PASSWORD'),         # ← Mot de passe
-        'HOST': config('DB_HOST'),                 # ← Adresse du serveur
-        'PORT': config('DB_PORT', default='5432'), # ← Port (5432 par défaut)
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',  # ← PostgreSQL au lieu de sqlite3
+    #     'NAME': config('DB_NAME'),                 # ← Nom de la base
+    #     'USER': config('DB_USER'),                 # ← Utilisateur
+    #     'PASSWORD': config('DB_PASSWORD'),         # ← Mot de passe
+    #     'HOST': config('DB_HOST'),                 # ← Adresse du serveur
+    #     'PORT': config('DB_PORT', default='5432'), # ← Port (5432 par défaut)
+    # }
 }
 
 

@@ -19,11 +19,11 @@ from cloudinary.models import CloudinaryField
 class CustomUser(AbstractUser):
     titrepersonnel = models.CharField(max_length=100, blank = True, null = True, default='full')
     biographie = models.TextField(blank=True)
-    #photo = models.ImageField(upload_to='profile/', blank=True, null=True)
-    photo = CloudinaryField('profile', folder='profile', blank=True, null=True)
-    #profile_public = models.ImageField(upload_to='profile/public/', blank=True, null=True)
+    photo = models.ImageField(upload_to='profile/', blank=True, null=True)
+    # photo = CloudinaryField('profile', folder='profile', blank=True, null=True)
+    profile_public = models.ImageField(upload_to='profile/public/', blank=True, null=True)
     
-    profile_public = CloudinaryField('profile_public', folder='profile/public', blank=True, null=True)
+    # profile_public = CloudinaryField('profile_public', folder='profile/public', blank=True, null=True)
     localisation = models.CharField(max_length=100, blank = True, null = True, default= 'brazzaville')
     cv_pdf = models.FileField(upload_to='cv/', blank=True, null=True)
     
